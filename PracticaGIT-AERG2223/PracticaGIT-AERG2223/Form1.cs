@@ -17,7 +17,7 @@ namespace PracticaGIT_AERG2223
             InitializeComponent();
         }
 
-        //AERG-2223.INTRODUCIMOS EL CODIGO PROPORCIONADO       
+       //AERG-2223.INTRODUCIMOS EL CODIGO PROPORCIONADO
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
@@ -32,11 +32,18 @@ namespace PracticaGIT_AERG2223
             textoTelegrama = txtTelegrama.Text;
 
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (rbUrgente.Checked)
                 tipoTelegrama = 'u';
 
             //Obtengo el número de palabras que forma el telegrama
             //numPalabras = textoTelegrama.Length;
+
+            //!? AERG-2223 Cambiamos el codigo para que lea Palabras en vez de caracteres.
+            numPalabras = textoTelegrama.Split(' ', '.', ',', ':', ';').Length;
+
+            if(rbOrdinario.Checked)
+                tipoTelegrama = 'o';
+            numPalabras = textoTelegrama.Split(' ', '.', ',', ':', ';').Length;
 
             //!? AERG-2223 Cambiamos el codigo para que lea Palabras en vez de caracteres.
             numPalabras = textoTelegrama.Split(' ', '.', ',', ':', ';').Length;
@@ -61,3 +68,5 @@ namespace PracticaGIT_AERG2223
         }
     }
 }
+    
+
