@@ -45,6 +45,8 @@ namespace PracticaGIT_AERG2223
                 tipoTelegrama = 'o';
             numPalabras = textoTelegrama.Split(' ', '.', ',', ':', ';').Length;
 
+            //!? AERG-2223 Cambiamos el codigo para que lea Palabras en vez de caracteres.
+            numPalabras = textoTelegrama.Split(' ', '.', ',', ':', ';').Length;
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
